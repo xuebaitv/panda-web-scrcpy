@@ -199,51 +199,6 @@ const showDeviceDrawer = ref(false);
 <template>
   <v-app>
     <v-app-bar height="64" color="white" app>
-      <v-container class="d-flex align-center justify-center pa-0" fluid>
-          <v-img
-          :src="logo"
-          max-width="24"
-          max-height="24"
-          class="mr-1 ml-10"
-        />
-        <PairedDevices
-          @pair-device="onPairDevice"
-          @update-connection-status="handleConnectionStatus"
-        />
-        
-        <!-- 分享按钮 -->
-        <ShareButton v-if="connected" class="ml-2" />
-        
-        <v-spacer />
-
-        <div class="d-flex align-center">
-          <div class="d-flex align-center mx-2">
-            <v-btn
-              icon
-              class="mr-2"
-              href="https://pandatestgrid.github.io/panda-web-scrcpy/"
-              target="_blank"
-              title="GitHub"
-            >
-              <v-icon>mdi-github</v-icon>
-            </v-btn>
-            <GitHubStats />
-          </div>
-
-          <v-btn
-            variant="text"
-            class="text-none"
-            style="height: 64px"
-            href="https://www.pandatest.net/device"
-            target="_blank"
-          >
-            <v-icon start>mdi-rocket-launch</v-icon>
-            功能加强版
-          </v-btn>
-        </div>
-      </v-container>
-    </v-app-bar>
-
     <v-main>
       <div
         ref="containerRef"
